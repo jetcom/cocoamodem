@@ -1,0 +1,47 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {bandMenuChanged = id; logQSO = id; }; 
+            CLASS = Contest; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bandMenu = id; 
+                contestView = id; 
+                logButton = id; 
+                qsoNumberField = id; 
+                watermark = id; 
+            }; 
+            SUPERCLASS = StripPhi; 
+        }, 
+        {CLASS = ContestTextField; LANGUAGE = ObjC; SUPERCLASS = OptionTextField; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OptionTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {
+            ACTIONS = {callFieldChanged = id; exchangeFieldChanged = id; rstFieldChanged = id; }; 
+            CLASS = RSTExchange; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                callAreas = id; 
+                dxCall = id; 
+                dxExchange = id; 
+                dxRST = id; 
+                rrMults = id; 
+                veArea = id; 
+            }; 
+            SUPERCLASS = Contest; 
+        }, 
+        {
+            CLASS = RTTYRoundupMults; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {callAreas = id; rrMults = id; veArea = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = StripPhi; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = TransparentTextField; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = ContestTextField; 
+        }
+    ); 
+    IBVersion = 1; 
+}

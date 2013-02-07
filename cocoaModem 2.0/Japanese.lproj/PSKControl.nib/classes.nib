@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setTxFrequency = id; }; 
+            CLASS = PSKControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                afcCheckbox = id; 
+                controlView = id; 
+                modeMenu = id; 
+                squelchControl = id; 
+                title = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

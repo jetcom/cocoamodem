@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {
+            CLASS = AYTextView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {log = id; }; 
+            SUPERCLASS = NSTextView; 
+        }, 
+        {CLASS = CMPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMTappedPipe; LANGUAGE = ObjC; SUPERCLASS = CMPipe; }, 
+        {CLASS = ContestTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = CrossedEllipse; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = ExchangeView; LANGUAGE = ObjC; SUPERCLASS = AYTextView; }, 
+        {
+            CLASS = ExtendedCrossedEllipse; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = CrossedEllipse; 
+        }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = OptionTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = OptionView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {auxButtonPushed = id; tonePairStore = id; }; 
+            CLASS = RTTYRxControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeIndicator = id; 
+                auxWindow = id; 
+                bandwidthMatrix = id; 
+                baudRateBox = id; 
+                controlView = id; 
+                demodulatorModeMatrix = id; 
+                exchangeView = id; 
+                inputAttenuator = id; 
+                markFreq = id; 
+                memorySelectMenu = id; 
+                receiverName = id; 
+                rxPolarityButton = id; 
+                shiftField = id; 
+                squelchSlider = id; 
+                tuningView = id; 
+                txPolarityButton = id; 
+                vuMeter = id; 
+            }; 
+            SUPERCLASS = CMTappedPipe; 
+        }, 
+        {
+            CLASS = SITORRxControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {lockedIndicator = id; }; 
+            SUPERCLASS = RTTYRxControl; 
+        }, 
+        {CLASS = SendView; LANGUAGE = ObjC; SUPERCLASS = AYTextView; }, 
+        {
+            CLASS = VUMeter; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {background = id; matrix = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

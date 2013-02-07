@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {findCallsign = id; lockButtonChanged = id; }; 
+            CLASS = ContestLog; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                callsignSearchField = id; 
+                infoField = id; 
+                logLockButton = id; 
+                notFoundText = id; 
+                tableView = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

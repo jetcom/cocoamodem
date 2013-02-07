@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<!-- @version(10.4) -->
+<dictionary title="cocoaModem Terminology">
+	<suite name="cocoaModem" code="ryry" description="Commands and classes for cocoaModem Scripting.">
+		<enumeration name="modulationMode" code="MdLN" description="PSK modulation mode.">
+			<enumerator name="bpsk31" code="bP31" description="Binary PSK31"/>
+			<enumerator name="qpsk31" code="qP31" description="Quadrature PSK31"/>
+			<enumerator name="bpsk63" code="bP63" description="Fast Binary PSK"/>
+			<enumerator name="qpsk63" code="qP63" description="Fast Quadrature PSK"/>
+			<enumerator name="bpsk125" code="bP12" description="Binary PSK125"/>
+			<enumerator name="qpsk125" code="qP12" description="Quadrature PSK125"/>
+			<enumerator name="fsk45" code="fS45" description="45 baud FSK"/>
+			<enumerator name="Feld" code="Feld" description="Standard Feld Hell"/>
+			<enumerator name="FM105" code="h105" description="FM Hell 105"/>
+			<enumerator name="FM245" code="h245" description="FM Hell 245"/>
+			<enumerator name="MFSK16" code="mf16" description="MFSK16"/>
+		</enumeration>
+		<enumeration name="modemState" code="TRxx" description="Transmit/receive state of modem">
+			<enumerator name="transmit" code="trTX" description="Transmit"/>
+			<enumerator name="receive" code="trRX" description="Receive"/>
+		</enumeration>
+		<enumeration name="interfaceType" code="iTyp" description="Interface types">
+			<enumerator name="interactive" code="tQso" description="Interactive (keyboard) interface."/>
+			<enumerator name="contest" code="tTst" description="Contest interface"/>
+		</enumeration>
+		<enumeration hidden="yes" name="pskMode" code="pMOD" description="PSK modulation mode (deprecated).">
+			<enumerator name="BPSK31" code="pb31" description="Binary PSK31"/>
+			<enumerator name="QPSK31" code="pq31" description="Quadrature PSK31"/>
+			<enumerator name="BPSK63" code="pb63" description="Binary PSK63"/>
+			<enumerator name="QPSK63" code="pq63" description="Quadrature PSK63"/>
+		</enumeration>
+		<enumeration hidden="yes" name="interfaceMode" code="imod" description="Modem mode in old interface (deprecated).">
+			<enumerator name="RTTY" code="irty" description="RTTY Modem (deprecated)."/>
+			<enumerator name="PSK" code="ipsk" description="PSK Modem (deprecated)."/>
+		</enumeration>
+		<value-type name="color" code="qRGB" description="RGB color triplet">
+			<cocoa name="NSColor" class="NSColor"/>
+		</value-type>
+		<class name="application" code="capp" description="cocoaModem scripts">
+			<cocoa class="NSApplication"/>
+			<property name="qso" code="qsoD" description="QSO Info" type="QSO Info">
+				<cocoa key="qso"/>
+			</property>
+			<property name="interactive interface" code="intX" description="Interactive (keyboard) interface." type="interface">
+				<cocoa key="interactiveInterface"/>
+			</property>
+			<property name="contest interface" code="tstX" description="Contest interface." type="interface">
+				<cocoa key="contestInterface"/>
+			</property>
+			<property name="rtty modem" code="ry1M" description="RTTY Modem." type="modem">
+				<cocoa key="rttyModem"/>
+			</property>
+			<property name="wideband rtty modem" code="wbRY" description="Wideband RTTY Modem." type="modem">
+				<cocoa key="widebandRTTYModem"/>
+			</property>
+			<property name="dual rtty modem" code="ry2M" description="Dual RTTY Modem." type="modem">
+				<cocoa key="dualRTTYModem"/>
+			</property>
+			<property name="psk modem" code="pskM" description="PSK Modem." type="modem">
+				<cocoa key="pskModem"/>
+			</property>
+			<property name="hellschreiber modem" code="Hell" description="Hellschreiber Modem." type="modem">
+				<cocoa key="hellModem"/>
+			</property>
+			<property name="pskModulation" code="PSKm" description="PSK Modulation mode (BPSK31, QPSK63, etc).  (Deprecated.)" type="pskMode"/>
+			<property name="pskRxAOffset" code="psra" description="The receive frequency offset of PSK channel A. (Deprecated.)" type="text">
+				<cocoa key="pskRxAOffset"/>
+			</property>
+			<property name="pskRxBOffset" code="psrb" description="The receive frequency offset of PSK channel B. (Deprecated.)" type="text">
+				<cocoa key="pskRxBOffset"/>
+			</property>
+			<property name="pskTxAOffset" code="psta" description="The transmit frequency offset of PSK channel A. (Deprecated.)" type="text">
+				<cocoa key="pskTxAOffset"/>
+			</property>
+			<property name="pskTxBOffset" code="pstb" description="The transmit frequency offset of PSK channel B. (Deprecated.)" type="text">
+				<cocoa key="pskTxBOffset"/>
+			</property>
+			<property name="qsoCall" code="qcal" description="The call sign in the QSO interface. (Deprecated.)" type="text">
+				<cocoa key="qsoCall"/>
+			</property>
+			<property name="qsoName" code="qnam" description="The name in the QSO interface. (Deprecated.)" type="text">
+				<cocoa key="qsoName"/>
+			</property>
+			<property name="modemMode" code="Mode" description="Modem mode (depricated)." type="interfaceMode">
+				<cocoa key="modemMode"/>
+			</property>
+			<property name="scriptVersion" code="SVer" description="cocoaModem AppleScript version" type="integer">
+				<cocoa key="scriptVersion"/>
+			</property>
+			<property name="contest" code="te5t" description="Contest" type="interface">
+				<cocoa key="contestInterface"/>
+			</property>
+			<property name="modemName" code="Mnam" description="Modem name (text)." type="text">
+				<cocoa key="modemName"/>
+			</property>
+			<property name="cw modem" code="mrSe" description="CW Modem." type="modem">
+				<cocoa key="cwModem"/>
+			</property>
+			<property name="mfsk modem" code="mmFK" description="MFSK Modem" type="modem">
+				<cocoa key="mfskModem"/>
+			</property>
+			<property name="watchdog" code="wOOf" description="watchdog timer" type="interface">
+				<cocoa key="watchdogTimer"/>
+			</property>
+			<property name="window state" code="wnDx" description="show/hide main window" type="boolean">
+				<cocoa key="windowState"/>
+			</property>
+			<property name="window position" code="wnXY" description="Window position (x,y)" type="any">
+				<cocoa key="windowPosition"/>
+			</property>
+			<property name="version" code="VeRS" description="version string" type="text" access="r">
+				<cocoa key="version"/>
+			</property>
+		</class>
+		<class name="interface" code="intF" description="interactive, contest" inherits="application">
+			<cocoa class="ModemManager"/>
+			<property name="band" code="Mtrs" description="Band (10,15,20,40,80 or 160)" type="integer"/>
+			<property name="lock" code="wLok" description="window position lock" type="boolean"/>
+			<property name="backgroundColor" code="bRGB" description="window color for untextured window" type="color">
+				<cocoa key="backgroundColor"/>
+			</property>
+			<responds-to name="select">
+				<cocoa method="selectInterface:"/>
+			</responds-to>
+			<responds-to name="reset">
+				<cocoa method="resetWatchdog:"/>
+			</responds-to>
+		</class>
+		<class name="modem" code="modM" description="rtty, psk, hellschreiber" inherits="interface">
+			<cocoa class="Modem"/>
+			<property name="transceiver 1" code="trx1" description="transceiver #1 in a modem" type="transceiver"/>
+			<property name="transceiver 2" code="trx2" description="transceiver #2 (optional) in a modem" type="transceiver"/>
+			<property name="selectedTransceiver" code="selT" description="selected transceiver in modem (1 or 2)" type="integer" access="r"/>
+			<property name="show controls" code="dAUX" description="show/hide control window for Lite RTTY interface that includes the crossed ellipses" type="boolean" access="w">
+				<cocoa key="showControls"/>
+			</property>
+			<property name="show spectrum" code="dFFT" description="show/hide spectrum window for Lite RTTY interface." type="boolean" access="w">
+				<cocoa key="showSpectrum"/>
+			</property>
+			<property name="controls position" code="pAUX" description="position of controls window (x,y)" type="any">
+				<cocoa key="controlsPosition"/>
+			</property>
+			<property name="spectrum position" code="pFFT" description="position of spectrum window (x,y)" type="any">
+				<cocoa key="spectrumPosition"/>
+			</property>
+			<property name="open config panel" code="oCFG" description="open config panel" type="boolean" access="r"/>
+			<responds-to name="select">
+				<cocoa method="selectModem:"/>
+			</responds-to>
+		</class>
+		<class name="transceiver" code="TsvR" description="transceiver 1, transceiver 2" inherits="modem">
+			<cocoa class="Transceiver"/>
+			<property name="state" code="trxS" description="transmit/receive state" type="modemState">
+				<cocoa key="state"/>
+			</property>
+			<property name="transmitter" code="trxT" description="transmitter module" type="module">
+				<cocoa key="transmitter"/>
+			</property>
+			<property name="receiver" code="trxR" description="receiver module" type="module">
+				<cocoa key="receiver"/>
+			</property>
+			<property name="modulation" code="trxM" description="PSK, Hellsvhreiber or MFSK modulation mode" type="modulationMode">
+				<cocoa key="modulation"/>
+			</property>
+			<property name="enable" code="trxE" description="enable the modem to receive and transmit (same as Active button in Config panels)" type="boolean">
+				<cocoa key="enable"/>
+			</property>
+			<responds-to name="flush">
+				<cocoa method="flushText:"/>
+			</responds-to>
+		</class>
+		<class name="module" code="modU" description="transmitter, receiver 1, receiver 2, etc" inherits="transceiver">
+			<cocoa class="Module"/>
+			<property name="frequency" code="Freq" description="frequency of module" type="real">
+				<cocoa key="frequency"/>
+			</property>
+			<property name="mark" code="Mark" description="mark frequency for an RTTY module" type="real">
+				<cocoa key="mark"/>
+			</property>
+			<property name="space" code="Spce" description="space frequency for an RTTY module" type="real">
+				<cocoa key="space"/>
+			</property>
+			<property name="baud" code="Baud" description="Baud rate for an RTTY module" type="real">
+				<cocoa key="baud"/>
+			</property>
+			<property name="stream" code="rxSX" description="received or transmit stream" type="text"/>
+			<property name="invert" code="Rvse" description="RTTY invert for module" type="boolean"/>
+			<property name="breakin" code="sQSK" description="Semi Break-in." type="boolean"/>
+			<property name="spectrum" code="h2of" description="get spectrum bins; each bin is one byte, 1024 bytes total in string" type="text" access="r"/>
+			<property name="next spectrum" code="h2on" description="number of milliseconds before the client needs to poll for the waterfall" type="integer" access="r"/>
+			<property name="replay" code="kBuf" description="set click history in seconds" type="real" access="w"/>
+		</class>
+		<class name="QSO Info" code="qsoX" description="Call sign, name, etc of station being worked." inherits="application">
+			<cocoa class="QSO"/>
+			<property name="operator name" code="qNAM" description="Name of operator being worked." type="text">
+				<cocoa key="opName"/>
+			</property>
+			<property name="callsign" code="qCAL" description="Callsign of station being worked." type="text">
+				<cocoa key="callsign"/>
+			</property>
+		</class>
+		<command name="select" code="ryrySInt" description="select interface or modem">
+			<direct-parameter description="the interface or modem to be selected" type="specifier"/>
+		</command>
+		<command name="flush" code="ryryFlsh" description="flush text stream">
+			<direct-parameter description="receiver or transmitter (text buffer)" type="module"/>
+		</command>
+		<command name="reset" code="ryryRset" description="reset (watchdog).">
+			<direct-parameter description="Watchdog timer." type="interface"/>
+		</command>
+	</suite>
+</dictionary>

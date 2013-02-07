@@ -1,0 +1,30 @@
+v0.76
+
+------------------
+Modem
+	ModemConfig
+		ModemSource
+			.AudioInputPort
+		ModemDest
+			.AudioOutputPort
+
+
+Application
+	(Extended)AudioInterface
+		(Extended)InputHub
+		(Extended)OutputHub
+			(Extended)InputPort
+			(Extended)OutputPort
+				(Extended)AudioChannel
+					.audioDevice
+						.streamID
+						.deviceID
+
+==================================================
+v0.78 (Hubless)
+
+-------------------
+Modem
+	ModemConfig
+		ModemSource
+		

@@ -1,0 +1,15 @@
+{
+    IBClasses = (
+        {CLASS = AudioPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = Oscilloscope; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {sourceChanged = id; styleChanged = id; }; 
+            CLASS = RTTYMonitor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {scopeView = id; sourceArray = id; specLabel = id; styleArray = id; }; 
+            SUPERCLASS = AudioPipe; 
+        }
+    ); 
+    IBVersion = 1; 
+}

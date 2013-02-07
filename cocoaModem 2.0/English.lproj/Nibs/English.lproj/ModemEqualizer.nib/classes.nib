@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {done = id; responseUpdated = id; }; 
+            CLASS = ModemEqualizer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {plot = id; power = id; view = id; }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = ModemEqualizerPlot; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

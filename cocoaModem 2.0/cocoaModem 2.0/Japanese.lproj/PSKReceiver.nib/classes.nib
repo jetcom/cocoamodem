@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {CLASS = ClickedTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FrequencyIndicator; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            ACTIONS = {
+                browserSetAlarm = id; 
+                browserSquelchChanged = id; 
+                browserSquelchRescan = id; 
+                testCheck = id; 
+            }; 
+            CLASS = PSKReceiver; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                IMDField = id; 
+                alarmTextField = id; 
+                beepCheckbox = id; 
+                browserSquelch = id; 
+                browserTable = id; 
+                controlView = id; 
+                freqIndicator = id; 
+                ignoreCaseCheckbox = id; 
+                phaseIndicator = id; 
+                rxFrequencyField = id; 
+                transmitLight = id; 
+                txFrequencyField = id; 
+            }; 
+            SUPERCLASS = CMPipe; 
+        }, 
+        {CLASS = PhaseIndicator; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,38 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                clearTempFolder = id; 
+                done = id; 
+                export = id; 
+                import = id; 
+                selectTempFolder = id; 
+            }; 
+            CLASS = Cabrillo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addr1Field = id; 
+                addr2Field = id; 
+                addr3Field = id; 
+                allowDupe = id; 
+                bandMenu = id; 
+                callUsedField = id; 
+                categoryMenu = id; 
+                clubField = id; 
+                emailField = id; 
+                exchangeSent = id; 
+                fontField = id; 
+                logExtension = id; 
+                nameField = id; 
+                nameUsedField = id; 
+                operatorsField = id; 
+                soapboxView = id; 
+                tempFolder = id; 
+                view = id; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

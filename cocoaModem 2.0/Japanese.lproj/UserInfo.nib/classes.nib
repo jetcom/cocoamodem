@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {done = id; }; 
+            CLASS = UserInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                arrlSection = id; 
+                brag = id; 
+                callField = id; 
+                country = id; 
+                cqZone = id; 
+                gridSquare = id; 
+                ituZone = id; 
+                nameField = id; 
+                stateField = id; 
+                view = id; 
+                yearLicensed = id; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }
+    ); 
+    IBVersion = 1; 
+}

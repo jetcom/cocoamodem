@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = AYTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ModemLog; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {contentView = id; logView = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

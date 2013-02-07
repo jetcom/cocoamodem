@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {done = id; export = id; import = id; }; 
+            CLASS = MacroSheet; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                exportButton = id; 
+                importButton = id; 
+                macroMatrix = id; 
+                name = id; 
+                titleMatrix = id; 
+                view = id; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,59 @@
+{
+    IBClasses = (
+        {CLASS = CMPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMTappedPipe; LANGUAGE = ObjC; SUPERCLASS = CMPipe; }, 
+        {CLASS = DestClient; LANGUAGE = ObjC; SUPERCLASS = CMTappedPipe; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ModemConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeButton = id; 
+                backgroundColor = id; 
+                fileSpeedCheckbox = id; 
+                inputPad = id; 
+                modemObj = id; 
+                oscilloscope = id; 
+                plotColor = id; 
+                soundFileControls = id; 
+                soundInputControls = id; 
+                soundOutputControls = id; 
+                soundOutputLevel = id; 
+                specLabel = id; 
+                textColor = id; 
+                transmitTextColor = id; 
+                waveformMatrix = id; 
+                window = id; 
+            }; 
+            SUPERCLASS = CMTappedPipe; 
+        }, 
+        {
+            CLASS = NetAudioDevice; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {target = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = Oscilloscope; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = SDRDevice; LANGUAGE = ObjC; SUPERCLASS = NetAudioDevice; }, 
+        {
+            CLASS = SoftRock; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                config = id; 
+                configButton = id; 
+                inputAttenuator = id; 
+                vuMeter = id; 
+                window = id; 
+            }; 
+            SUPERCLASS = SDRDevice; 
+        }, 
+        {CLASS = SoftRockConfig; LANGUAGE = ObjC; SUPERCLASS = ModemConfig; }, 
+        {
+            CLASS = VUMeter; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {background = id; matrix = id; }; 
+            SUPERCLASS = CMPipe; 
+        }
+    ); 
+    IBVersion = 1; 
+}

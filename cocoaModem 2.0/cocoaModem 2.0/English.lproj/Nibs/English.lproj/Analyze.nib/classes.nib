@@ -1,0 +1,140 @@
+{
+    IBClasses = (
+        {
+            CLASS = AYTextView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {log = id; }; 
+            SUPERCLASS = NSTextView; 
+        }, 
+        {
+            ACTIONS = {repeatButtonPushed = id; spectrumOptionChanged = id; }; 
+            CLASS = Analyze; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dynamicRange = id; 
+                rxctrl = id; 
+                scope = id; 
+                spectrum = id; 
+                timeConstant = id; 
+            }; 
+            SUPERCLASS = Modem; 
+        }, 
+        {
+            ACTIONS = {scopeModeChanged = id; scopeTriggerChanged = id; scopeTriggered = id; }; 
+            CLASS = AnalyzeConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bitErrorField = id; 
+                characterCountField = id; 
+                characterErrorField = id; 
+                fileName = id; 
+                fileRepeat = id; 
+                framingErrorField = id; 
+                scope = id; 
+                scopePlotMode = id; 
+                scopeTriggerMode = id; 
+                scopeTriggerOnError = id; 
+                sync = id; 
+            }; 
+            SUPERCLASS = RTTYConfig; 
+        }, 
+        {CLASS = AnalyzeScope; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = AudioPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMTappedPipe; LANGUAGE = ObjC; SUPERCLASS = CMPipe; }, 
+        {CLASS = ContestTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = CrossedEllipse; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = DestClient; LANGUAGE = ObjC; SUPERCLASS = CMTappedPipe; }, 
+        {CLASS = ExchangeView; LANGUAGE = ObjC; SUPERCLASS = AYTextView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {configButtonPushed = id; }; 
+            CLASS = Modem; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {config = id; receiveView = id; transmitView = id; view = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = ModemConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeButton = id; 
+                backgroundColor = id; 
+                fileSpeedCheckbox = id; 
+                inputPad = id; 
+                modemObj = id; 
+                oscilloscope = id; 
+                plotColor = id; 
+                soundFileControls = id; 
+                soundInputControls = id; 
+                soundOutputControls = id; 
+                soundOutputLevel = id; 
+                specLabel = id; 
+                textColor = id; 
+                transmitTextColor = id; 
+                waveformMatrix = id; 
+                window = id; 
+            }; 
+            SUPERCLASS = DestClient; 
+        }, 
+        {CLASS = OptionPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = OptionTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = OptionView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = Oscilloscope; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = Preferences; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = RTTYConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {prefMatrix = id; sidebandMenu = id; }; 
+            SUPERCLASS = ModemConfig; 
+        }, 
+        {
+            ACTIONS = {
+                auxButtonPushed = id; 
+                bandwidthChanged = id; 
+                demodulatorModeChanged = id; 
+                inputAttenuatorChanged = id; 
+                invertChanged = id; 
+                squelchChanged = id; 
+                tonePairChanged = id; 
+                tonePairSelected = id; 
+                tonePairStore = id; 
+            }; 
+            CLASS = RTTYRxControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                auxWindow = id; 
+                bandwidthMatrix = id; 
+                baudRateBox = id; 
+                controlView = id; 
+                demodulatorModeMatrix = id; 
+                exchangeView = id; 
+                inputAttenuator = id; 
+                markFreq = id; 
+                memorySelect = id; 
+                receiverName = id; 
+                spaceFreq = id; 
+                squelch = id; 
+                tuningView = id; 
+                vuMeter = id; 
+            }; 
+            SUPERCLASS = AudioPipe; 
+        }, 
+        {
+            ACTIONS = {channelMenuChanged = id; }; 
+            CLASS = RTTYStereoRxControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dutChannelMenu = id; refChannelMenu = id; }; 
+            SUPERCLASS = RTTYRxControl; 
+        }, 
+        {CLASS = SendView; LANGUAGE = ObjC; SUPERCLASS = AYTextView; }, 
+        {CLASS = Spectrum; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = VUMeter; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {background = id; matrix = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

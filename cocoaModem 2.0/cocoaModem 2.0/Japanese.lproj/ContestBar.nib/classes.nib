@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {repeatMacro = id; stopRepeat = id; }; 
+            CLASS = ContestBar; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {macroMenu = id; pauseTime = id; repeatingIndicator = id; view = id; }; 
+            SUPERCLASS = StripPhi; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = StripPhi; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

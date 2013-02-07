@@ -1,0 +1,143 @@
+{
+    IBClasses = (
+        {CLASS = CMPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMTappedPipe; LANGUAGE = ObjC; SUPERCLASS = CMPipe; }, 
+        {
+            ACTIONS = {
+                contestModeChanged = id; 
+                showContestMacroSheet = id; 
+                transmitContestMessage = id; 
+            }; 
+            CLASS = ContestInterface; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                contestDate = id; 
+                contestMessageMatrix = id; 
+                contestMode = id; 
+                contestTab = id; 
+                contestTime = id; 
+                contestView = id; 
+            }; 
+            SUPERCLASS = MacroInterface; 
+        }, 
+        {CLASS = DestClient; LANGUAGE = ObjC; SUPERCLASS = CMTappedPipe; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {showMacroSheet = id; transmitMessage = id; }; 
+            CLASS = MacroInterface; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {messageMatrix = id; }; 
+            SUPERCLASS = Modem; 
+        }, 
+        {
+            CLASS = Modem; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                config = id; 
+                leadinField = id; 
+                receiveView = id; 
+                releaseField = id; 
+                transmitView = id; 
+                txConfig = id; 
+                view = id; 
+            }; 
+            SUPERCLASS = CMPipe; 
+        }, 
+        {
+            ACTIONS = {
+                activeButtonChanged = id; 
+                colorChanged = id; 
+                fileSpeedChanged = id; 
+                inputPadChanged = id; 
+            }; 
+            CLASS = ModemConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeButton = id; 
+                backgroundColor = id; 
+                fileSpeedCheckbox = id; 
+                inputPad = id; 
+                modemObj = id; 
+                oscilloscope = id; 
+                plotColor = id; 
+                soundFileControls = id; 
+                soundInputControls = id; 
+                soundOutputControls = id; 
+                soundOutputLevel = id; 
+                specLabel = id; 
+                textColor = id; 
+                transmitTextColor = id; 
+                waveformMatrix = id; 
+                window = id; 
+            }; 
+            SUPERCLASS = DestClient; 
+        }, 
+        {CLASS = OptionView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = Oscilloscope; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {averageButton = id; averagePopupMenu = id; baselineButton = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = RTTYConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {afskMenu = id; prefMatrix = id; sidebandMenu = id; }; 
+            SUPERCLASS = ModemConfig; 
+        }, 
+        {
+            ACTIONS = {flushContestBuffer = id; flushTransmitStream = id; }; 
+            CLASS = RTTYInterface; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {breakinButton = id; transmitButton = id; transmitLight = id; }; 
+            SUPERCLASS = ContestInterface; 
+        }, 
+        {CLASS = RTTYWaterfall; LANGUAGE = ObjC; SUPERCLASS = Waterfall; }, 
+        {CLASS = SITOR; LANGUAGE = ObjC; SUPERCLASS = WFRTTY; }, 
+        {CLASS = SITORConfig; LANGUAGE = ObjC; SUPERCLASS = WFRTTYConfig; }, 
+        {
+            CLASS = WFRTTY; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                configA = id; 
+                configB = id; 
+                configTab = id; 
+                contestTransmitSelect = id; 
+                dynamicRangeA = id; 
+                dynamicRangeB = id; 
+                groupA = id; 
+                groupB = id; 
+                receiverA = id; 
+                receiverB = id; 
+                restoreToneA = id; 
+                restoreToneB = id; 
+                transmitLock = id; 
+                transmitSelect = id; 
+                waterfallA = id; 
+                waterfallB = id; 
+            }; 
+            SUPERCLASS = RTTYInterface; 
+        }, 
+        {
+            CLASS = WFRTTYConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {vfoOffsetField = id; }; 
+            SUPERCLASS = RTTYConfig; 
+        }, 
+        {
+            ACTIONS = {waterfallRangeChanged = id; }; 
+            CLASS = Waterfall; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                noiseReductionButton = id; 
+                waterfallClip = id; 
+                waterfallLabel = id; 
+                waterfallRange = id; 
+                waterfallTicks = id; 
+                waterfallWidthButton = id; 
+            }; 
+            SUPERCLASS = NSImageView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

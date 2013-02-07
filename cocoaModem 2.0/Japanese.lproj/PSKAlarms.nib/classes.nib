@@ -1,0 +1,11 @@
+{
+    IBClasses = (
+        {
+            CLASS = PSKBrowserTable; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {alarmTextField = id; ignoreCaseCheckbox = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

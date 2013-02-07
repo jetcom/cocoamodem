@@ -1,0 +1,5 @@
+tell application "cocoaModem 2.0"
+	tell transceiver 1 of wideband rtty modem
+		get next spectrum of receiver
+	end tell
+end tell

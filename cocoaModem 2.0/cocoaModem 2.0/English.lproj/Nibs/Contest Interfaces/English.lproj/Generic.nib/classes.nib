@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {
+            CLASS = Contest; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bandMenu = id; 
+                clearButton = id; 
+                contestView = id; 
+                logButton = id; 
+                qsoNumberField = id; 
+                watermark = id; 
+            }; 
+            SUPERCLASS = StripPhi; 
+        }, 
+        {CLASS = ContestTextField; LANGUAGE = ObjC; SUPERCLASS = OptionTextField; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {dxCallSet = id; dxExchangeSet = id; }; 
+            CLASS = Generic; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dxCall = id; dxExchange = id; }; 
+            SUPERCLASS = Contest; 
+        }, 
+        {CLASS = OptionTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = StripPhi; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = TransparentTextField; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = ContestTextField; 
+        }
+    ); 
+    IBVersion = 1; 
+}

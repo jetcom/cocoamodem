@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AppleScript Tests' target in the 'AppleScript Tests' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

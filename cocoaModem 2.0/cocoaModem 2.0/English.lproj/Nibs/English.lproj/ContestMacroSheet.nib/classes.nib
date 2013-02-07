@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {done = id; }; 
+            CLASS = ContestMacroSheet; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {contestSheetName = id; }; 
+            SUPERCLASS = MacroSheet; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {done = id; export = id; import = id; }; 
+            CLASS = MacroSheet; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                exportButton = id; 
+                importButton = id; 
+                macroMatrix = id; 
+                name = id; 
+                titleMatrix = id; 
+                view = id; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = OptionView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

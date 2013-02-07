@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = CMPipe; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CMTappedPipe; LANGUAGE = ObjC; SUPERCLASS = CMPipe; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ModemDest; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                controlView = id; 
+                levelView = id; 
+                outputAttenuator = id; 
+                outputDestMenu = id; 
+                outputLevel = id; 
+                outputMenu = id; 
+                outputParam = id; 
+                outputSamplingRateView = id; 
+                pttMenu = id; 
+            }; 
+            SUPERCLASS = CMTappedPipe; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = QSO; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                callButton = id; 
+                callsignField = id; 
+                clearButton = id; 
+                logButton = id; 
+                nameButton = id; 
+                nameField = id; 
+                utcDateField = id; 
+                utcTimeField = id; 
+                view = id; 
+            }; 
+            SUPERCLASS = StripPhi; 
+        }, 
+        {CLASS = StripPhi; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

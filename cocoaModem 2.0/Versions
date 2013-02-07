@@ -1,0 +1,629 @@
+0.10	(Nov 2005) 
+		Major reorganization of cocoaModem into cocoaModem 2.0
+		Change source code copyright to Creative Commons
+		Added baud rate choice in RTTY modems.
+		Config button moved to Window menu of menu bar.  
+		Dual RTTY uses tabbed views in Config panel to config each of the two independent modems.
+		10msec pause between AudioSetProperty and AudioGetProperty (fast machine, slow device)
+		Ignore duplicate audio device names from DigiDesign's version of CoreAudio.
+		Connect log button to an AppleScript file.
+		Save QSO Interface state in preference.
+		Added lots of AppleScript support.
+		FSK dots removed from Crossed ellipse of Dual RTTY.
+		Diagnostic window moved to Window Menu.
+		Added a mult window for RTTY Roundup.
+		
+0.11	(Dec 23 2005) 
+		Area mults for Roundup turn green when all states in the area worked.
+		Added more dynamic range menu items for Dual RTTY Spectrum.
+		Added waterfall to Dual RTTY.
+		Import old preferences.
+		
+0.12	(Dec 24 2005) 
+		Reconnect transmit and receive menus.
+		Applied 0.5*log(slider) + 1.0 to output level control (AudioInterface framework).
+
+0.13	(Dec 25 2005)
+		Click buffer for PSK (CoreModem framework).
+		
+0.14	(Dec 26 2005)
+		Moved Normal/Reverse toggles to the main DualRTTY window.
+		Corrected slight y-offset in Crossed Ellipse.
+		
+0.15	(Dec 27 2005)
+		band menu AppleScript
+		
+0.16	(Dec 28 2005)
+		preference to use control instead of option key in PSK
+		
+0.17	(Jan 4, 2006)
+		Fixed USOS bug (coreModem)
+		Force LTRS shift whenever RTTY polarity changes (coreModem)
+		Improved IMD estimation (coreModem)
+		Reconnect PSK AFC (was left disconnected in coreModem) and added into PSK Prefs
+		Added simple PSK Squelch
+		New Wideband RTTY interface.
+		Changed RTTY interfaces to Mark/Shift/Baud instead of Mark/Space/Baud.
+		Added A/B buttons to Dual and Wideband contest interfaces.
+		Added %p contest macro.  %p = %n if callsign field is not empty, %n-1 otherwise.
+		Protect slow machine from capturing empty contest callsigns.
+		Allow dupes to be worked and logged.
+		Show dupe info in contest log.
+		Create new journal when contest log is edited before any new QSO made.
+		Added dynamic range control to waterfall in wideband RTTY.
+		Scroll wheel tuning.
+		Fixed Crossed Ellipse bandwidth for very narrow shifts.
+		Narrow ellipse bandwidth for wideband RTTY.
+
+0.18	(Jan 23, 2006)
+		Implemented Hellschreiber
+		Fixed stop bits bug in simple RTTY (always selecting 1 stop bit)
+		Bumped Plist version to 3 to auto-fix stop bit bug
+		Wired PSK squelch controls to Plist
+		Aliased "Internal speakers" and "Headphones" for Built-in sound output.
+		Added clear button in contest interface (in addition to %U)
+		
+0.19	(Feb 2, 2006)
+		Fixed forced-LTRS bug with floating tone pair.
+		Increased Hellschreiber buffer size.
+		Added AppleScripts for Hellschreiber.
+
+0.20	(Feb 5, 2006)
+		Implemented SITOR-B
+		Expose Baudot decoder in CoreModem to subclass Moore decoder (CoreModem).
+		Added delay line to CoreFilter (CoreFilter).
+		Don't override RTTY squelch in Plist (CoreModem)
+		fixed negative callsign hash
+		BARTG HF and time macros
+
+0.21	(Feb 14, 2006)
+		Universal Binary.
+		Fixed Intel endian for colors and AIFF (AudioInterface)
+		NetAudio implementation (AudioInterface).
+		Slash-zero checkbox needed relaunch for DualRTTY and WidebandRTTY to take hold.
+		Refresh contest macro buttons when changing interfaces.
+		Allow tooltips to be removed from all interfaces.
+		PSK mode menu (BPSK63, etc) was left unconnected.
+		
+0.22	(Mar 4, 2006)
+		Defaulted empty modem enable string to @"1111111"
+	
+0.23	(Mar 5, 2006)
+		Implemented HF FAX.
+		Fixed Hellschreiber font endian bug for Intel.
+		Change buffering scheme in Hellschreiber, now has 8000 character buffer.
+		Fixed B Receiver (USOS) prefs
+		Added preference to SITOR-B to print '_' for an error character
+		Cmd-I keyboard shortcut to toggle between interactive and contest interfaces.
+		
+0.24	(Apr 1, 2006)
+		"Hide Window on deactivation" is defaulted to on.
+
+0.25	(Apr 2, 2006)
+		Fix FAX Save bug (data release)
+		Various AutoRelease bugs.
+		Implemented FM Hell
+		Implemented flush in Hellschreiber
+		Added KC4FOX's double wide font
+		Added direct AppleScripts for MacLoggerDX
+
+0.26	(Apr 9, 2006)
+		FM Hell 105
+		Bit aligned font for FM Hell 105
+		Refreshes Hellschriber NSView only in the neighborhood of the most recent glyph column.
+		Cross-correlate data to reduce false positives in HF-FAX start/stop signals and fixed bug with hsync.
+		Lower HF-FAX screen update priority.
+		Fixed AppleScript transmit buffer readback.
+		Added wideband RTTY to AppleScript.
+		Added RTTY invert to AppleScript.
+		Added wideband RTTY Tx locks.
+
+0.27	(Apr 28, 2006)
+		Click (history) buffer for wideband RTTY and PSK modes.
+		PTT selection per interface basis.
+		Added Router PTT connection.
+		Upper ASCII characters in PSK.
+		Watchdog timer preference.
+		Convert pasteboard to plain text when pasting into the transmit view.
+		Added threads to buffer each of the CoreAudio inputs (AudioInterface).
+		Reconnected RTTY and SITOR-B Bell (CoreModem).
+		Added shift click to turn off Hellschreiber receiver.
+		Disconnect audio devices when sleep notification received.
+		Make cocoaPTT quit when cocoaModem quits.
+		HF-FAX memory release.
+		Handle audio device wakeup on powered down USB hubs.
+
+0.28	(Jul 2, 2006)
+		MLDX PTT was left out.
+
+0.29	(Nov 30, 2006)
+		Turn off sampling if config window is closed and modem is not active.
+		Added equalizer to PSK, Wideband RTTY and Hellschreiber.
+		fprintf %@ no longer works with NSString
+		
+0.30	(Dec 2, 2006)
+		Wideband CW Interface
+		Added no-newline option to Contest menu.
+		Added Hellschriber to Contest Interface.
+		Activated right output audio channel (AudioInterface)
+		CMUpdateFIRBandpassFilter (CoreFilter)
+		Waterfall dynamic range fixed for Hellschreiber.
+
+0.31	(Jan 17, 2007)
+		Synch AM Reception
+		Turn CW Monitor channel sampling off when CW is not the selected interface.
+		Cut number macros (%o and %N).
+
+0.32	(Jan 26, 2007)
+		MFSK16 start
+		Tossed ESC character in TextViews
+		CoreModem modified to take MFSK Varicode
+
+0.33	(Feb. 27, 2007)
+		Position of PSK, WB RTTY, Dual RTTY and CW receive sections
+		Change name in PTT menu to folder name of User PTT scripts.
+		Make the main window the key window when command-T is pressed
+		Noise reduction for PSK, MFSK, RTTY, CW and Hellschreiber waterfalls
+		Hellschreiber: set FeldHell bandwidth to 230 Hz, fixed bug when switching between Feld and FM105
+		Average and baseline in config spectra.
+		User definable Morse characters
+		Mapped carriage return in MFSK to newline for Mac.
+		Connected MFSK input attenuator.
+		MFSK waterfall correction for LSB.
+		Fixed contest macro repeats.
+		Connected CW output attenuator.
+		CW latency menu.
+		Flush (buffered) dangling character in CW.
+		RTTY Matched Filter kernel (CoreModem)
+		Allow Decimation filter to be longer than input array (CoreFilter)	
+		Change cocoaPTT (cocoaPTT) to open with write-only in case it is connected to a serial stream
+		Don't release error dictionary from NSAppleScript in PTTHub.
+		microKeyer setup string to allow audio routing and other parameters
+
+0.34	(May 28, 2007)
+		Fixed bug in logScriptFileName in preferences
+
+0.35	(Jun 11, 2007)
+		Allow US keyboard to send diacritics (e.g. umlauts) on PSK, MFSK nd CW
+		Morse.txt extendedto have diffrent weights, and Unicode.
+		AudioInterface guards against CoreAudio asking for buffers larger than BUFLEN (AudioInterface)
+        
+0.36    (July 29, 2007)
+        Fixed cocoaPTT buf (PTTHub was flagging userPTT as opened instead of cocoaPTT)
+		
+0.37	(Nov 1, 2007)
+		Fixed problem with Cmd-R in CW waiting indefinitely for flush
+		Leopard cleanups (splash screen, NSConditionLock)
+		
+0.38	(Nov 4, 2007)
+		Added "Lite" interface.
+		Changed cString types.
+		Set background color for PSK.
+
+0.39	(Nov 5, 2007)
+		Splash screen as a separate object.
+
+0.40	(Nov 7, 2007)
+		MicroKeyer II recognition.
+
+0.41	(Nov 8, 2007)
+		Direct input source selection.
+		Allows single modem selection (single modems used to be muted).
+		
+0.42	(Nov 10, 2007)
+		Change plist to avoid problem in Leopard with non-existant NSDictionary.
+		
+0.43	(December 27, 2007)
+		Check source when switching modems.
+		Multistream devices, and multiple devices with the same name.
+		Changed Lite preferences to "off."
+
+0.44	(Jan 2008)
+		Handle linefeeds that some apps are sending in macros
+		Fixed spacing in CW decoder.
+		Allow PSK buffer "type ahead" in PSK when going through AppleScripts.
+
+0.45	(Jan 10, 2008)
+		Fixed exchange field lock problem in contest interface.
+		Changed IMD measurement scheme.
+		Added PSK31 transmit filter.
+
+0.46	(Jan 12, 2008)
+		Clear RTTY and PSK ring buffers when transmission ends.
+		
+0.47	(Feb 10, 2008)
+		Wide PSK and RTTY waterfalls.
+		Fixed PSK xcvr1/xcvr2 selection (bug report from KD6CJI)
+		Added NetAudio framework.
+
+0.48	(Feb 18, 2008)
+		Fixed microHAM audio router initialization bug.
+		Present Alert message instead of crashing when non-ASCII encodings come in from Kotoeri component.
+		Changed use of NSLock to NSConditionLock in Leopard for CW speed estimation.
+		Fixed CW problem with macros for manual RIT.
+
+0.49	(Feb 18, 2008)
+		Fixed NSConditionLock bug.
+
+0.50	(Mar 7, 2008)
+		AudioInterface framework (1.1)
+		Multiple channels ( > 2 ) for input and output devices.
+		Increase maximum number of input streams to 16.
+		Default microKeyer II input source to external line input instead of microphone.
+		Unkey PTT before quitting cocoaModem.
+
+0.51	(Mar 18, 2008)
+		v2 firmware support for microKeyer II v5 support for digiKeyer and microKeyer
+
+0.52	(Mar, 2008 - May 2008; released June 7)
+		// re-sync buffer (when start bit is lost) for RTTY (not yet enabled -- see OLDDEMOD in RTTYReceiver.m)
+		Fixed - AppleScript query of window position not working in Leopard
+		set window color from AppleScript.
+		Converted color well to RGB color space.
+		Changed @"NSDeviceRGBColorSpace" to NSDeviceRGBColorSpace
+		
+0.53	(May, 2008 - June 2008; released June 7)
+		Prevent selecting channel index in ModemSource that does not exist.
+		Use Core Audio AudioConverter for decimating.
+		Added sampling rate interfaces (v0.53a)
+		Deferred update from Plist (including core audio) (v0.53b)
+		Fixed CW monitor right channel (v0.53c)
+		Don't retrieve for plist if plist has never been updated (0.53d)
+		Added Morse.txt for output (0.53e)
+
+0.54	(June 10, 2008)
+		deferred plist was being updated from released dictionary
+
+0.55	(June 17, 2008)
+		create thread safe use of AudioConverter
+
+0.56	(July 1, 2008)
+		added modem > selectedTransceiver in applecript
+		(Aug 31, 2008)
+		disabled deprecated contests from menu
+		(Sept 2, 2008)
+		Allow transmit textview editing if not transmitting.
+		(Sept 10, 2008)
+		Fixed bug in RTTY interface with return to receive when there is no transmit view (Lite interface)
+
+0.57	(Oct 8, 2008)
+		Improved BPSK31 and QPSK31 demodulators.
+		Default PSK AFC (PSK COntrol) to On.
+		Reduce CPU usage of phase indicator.
+		Ignore crlf pairs.
+		0.57b - replaced NSPipe in ExtendedAudioChannel with DataPipe.
+		0.57c - PSKHub ver 4
+		0.57d - replace data pilelines in HF-FAX with DataPipe, size of pdf, enable/disable horizontal scroller immediately when half/full changes.
+
+0.58	(Nov 14, 2008)
+		Guard against placing a demodulator in the removal list more than once.
+		
+0.59	(Nov 14, 2008)
+		LSB was not showing on the PSK Table View (mappedRow was off by 1)
+		
+0.60	(Nov 17, 2008)
+		Fix deferred init problem for PTT hub (move user ptt string update before modemDest update).
+
+0.61	(Nov 20, 2008)
+		Fix sdef incompatibilities with Tiger.
+		
+0.62	(December 16, 2008)
+		Changed Burr-Brown default to 16000.
+		Fixed DataPipe partial buffer bug (never exposed).
+
+0.63	(December 17, 2008)
+		Changed Burr-Brown output default to 32000 (16000 is only available as input)
+		
+0.64	(January 20, 2009)
+		Removed transmitViewLock since all NSView accesses are currently done from the main thread.
+		Reset watchdog from AppleScript.
+		Added spectrum display to RTTY Lite, with 0.5 second spectrum averaging.
+		Add AppleScript support to fetch spectrum data.
+		Add AppleScript to show/hide window.
+		Add AppleScript to set/read window position.
+		Add AppleScript to show/hide spectrum and controls windows in Lite RTTY.
+		Add AppleScript to set/read spectrum and controls windows position.
+		Add AppleScript to show config panel (and activate).
+		Preference for using or not using NetAudio.
+		Preference for hiding Lite Window.
+		Don't alter fonts in plist when Lite window is used.
+		Added click buffer access from AppleScript to WB RTTY and PSK.
+		Added PSK125.
+
+0.65	(January 2009)
+		Fixed missing spectrum averaging bug.
+		Use different -enterTransmitMode for RTTY and RTTY Lite.
+		Defer switch from transmit to receive by 300 ms so the output has a chance to flush.
+		Fixed bug when backspacing in RTTY interface.
+
+0.66	(February 7, 2009)
+		Change Router quit script to QuitIfNotInUse.
+		Filtered contest macros.
+		pskDemodulatorLock to throttle input.
+		PSK hard limit backspace to send/recieve boundary.
+
+0.67	(February 17, 2009)
+		AppleScript RTTY transmit tone pair was not implemented.
+		Added independent transmitTonePair (from tonePair) in RTTYRxControl
+		Changing LSB/USB will reset RTTY tone pairs to base pair
+		Change µH Router PTT and FSK to WRITEONLY
+
+0.68	(April 3, 2009)
+		When tonepair memory is changed, it is not transferred to transmitTonePair
+		AppleScript returning tx tonepair for rx tonepair when there is a spilt.
+		Option to print <figs>, etc control characters in wideband and dual RTTY interfaces.
+		µH Router connections config changed to checkbox for digital mode.
+		Added \t (LTRS) and \f (FIGS) macros
+		Opened PSK31 4 kHz waterfall up for 4800 kHz.
+
+0.69	(May 9, 2009)
+		Fixed bug in AudioInterface Framework that caused Tascam US-122L not to be seen.
+
+0.70	(May 29, 2009)
+		Set sdef to Tiger.
+		Added Localization strings.
+		Incorporated Nao, JF1WWZ's nib files.
+		Adding throttle on PSK transmission when an Input Method (e.g., Kotoeri) is in the middle of creating a character.
+		Added "Use Unicode" and "PSK31 raw" menu tems in Interface menu and implemented Shift-JIS interpretation of Unicode in PSK interface.
+		NOTE: callsign and name capture only in ASCII.
+
+0.71	(June 10, 2009)
+		Use Unicode to detect slash zero.
+		Shift-JIS PSK preference for non-Japanese system.
+		
+0.72	(June 17, 2009)
+		Use both kAudioObjectPropertyName and old kAudioDevicePropertyDeviceName calls since RME FireFace 400 does not respond to newer call.
+		Check web page http://homepage.mac.com/chen/w7ay/updates.txt for updates.
+		Allow 0x7e in macros.  Use NSArray in plist instead of ~.
+		
+0.73	(July 2009)
+		Implement DominoEX.
+		Tuned GUI to reduce CPU use (display instead of setNeedsDisplay:).
+		Move dynamic range scale of waterfall for low SNR.
+		Increase time from AudioDeviceStop to AudioDeviceRemoveIOProc to 0.1 seconds for buggey Core Audio plug ins.
+		Watchdog increased to 150 seconds (97.213 state max of 3 minutes).
+		415 Hz FAX deviation for DWD in addition to 400 Hz, larger MAXFAXHEIGHT (from 1600 to 2400)
+		Noise Reduction button saves to plist.
+		Change waterfall markers from 1 pixel wide to 1.25 pixel wide.
+
+0.74	(Aug 2009)
+		check for receiver changes before dereferencing demodulator in MFSK
+	
+0.75	(Sept 2009)
+		Moved setMFSKSpread in MFSKWaterfall to setSpread in Waterfall.m.
+
+0.76	(Oct 4, 2009)
+		Changed bundle identifier from w7ay.cocoaModem 2.0 to w7ay.cocoaModem_2.0
+		Bug fix array in CMVaricode.  Typo in array size.
+		Consolidated ExtendedAudioInterface
+		Don't drain the autorelease pool in ExtendedAudioChannel for Snow Leopard
+		Snow Leopard does not change sampling rate (AudioStreamSetProperty) right away.
+		PSK init, use preconstructed QPSK decode table.
+		Use timers to avoid problem with audio IOProc removal with third party plug ins.
+		Fixed SyncAM waterfall bug, reported by Mika OH3XX.
+		Input sound device attenuation range fixed to 0 dB if not adjustable.
+		Fixed RTTY Monitor's Matched Filter selection.
+
+0.77	(Nov 9, 2009)
+		Sanity check in setupMicroKeyer for bad string.
+
+0.78	(Nov 16, 2009)
+		Fixed %n contest macro bug
+		Fixed bug when there is only a single modem selected in cocoaModem Preferences.
+		Avoid asking depending on AudioStreamPropertyInfo for size of AudioStreamBasicDescription (yet another RME problem).
+		Return from PSKBrowserHub's disableTableView if skipMultipleDemodulators is already true.
+		Do not call AudioDeviceRemoveIOProc unless source/destination changes.
+		Update from hardware change -- all interface devices stay in sync.
+		Aural Monitor, change over Synch AM, CW.
+		Fixed plist bug with CW interface.
+		(0.78b) avoid setting sampling rate (check first) because it is slow
+		(0.78c) removed extraneous on-off switchings
+
+0.79	(Nov 17, 2009)
+		Fix SITOR-B bug.
+
+0.80	(Nov 23, 2009)
+		Remove read thread NSAutoreleasePool flushing in ModemSource readThread
+		Create a new BitmapImageRep when a new HF-FAX scanline arrives (SL caches redraws).
+		HF-FAX vertical scrolling now done with offline buffer.
+		connect HF-FAX input attenuator
+		connect half/full size button to plist
+		(0.80l) fixed static memory leaks
+
+0.81	(Nov 25, 2009)
+		Added slash zero to Shift-JIS version.
+		Use FAXFrame for saving to pdf.
+
+0.82	(Jan 10, 2010)
+		Only allow backspaces when editing the transmitted text during transmission in PSK.
+		Don't release and recreate NSDate object (KH6CW).
+		Check if MacLoggerDX v4 or v5 scripts should be used.
+
+0.83	(Jan 30, 2010)
+		userPTT now calls close
+		Fixed RTTY transmit baud rate bug (stuck at 45.45 baud even when receive baud rate changes) 
+		ASCII (RTTY) mode
+		Tighten RTTY filters
+
+0.84	(Mar 1, 2010)
+		add USOS to FSK (KJ4NNO reported 599 009 received as 599 ppo)
+		
+0.85	(May 8, 2010)
+		Implemented missing Flush for MFSK modes.
+		Implemented OOK output for RTTY modes and CW mode.
+		Mono channel bug fix.
+
+0.86	(May 10, 2010)
+		Built-in audio level when quitting bug.
+		
+0.87	(July 5, 2010)
+		digiKeyer OOK 
+
+0.88	(August 8, 2010)
+		Sanity check for PSKMatchedFilter array out of bounds
+		Check PSK31 menu when switching transmitter.
+		Reworked Aural Monitor
+		Aural Monitor Blend (DL2RUM request)
+		Aural Mute was not saved to plist.
+		Aural Monitor turns on at launch if mute is off.
+		Aural Monitor attenuation now fabs()
+		Tx aural monitor now independent of Tx sound card attenuation
+		Connect stepped attenuator in Aural Monitor.
+		Normalized different modems' output.
+		Change output sound cards from -3 dB full scale to -1.5 dB full scale to get a little more output.
+		Separated CW aural filtering for Rx and Tx to handle fast QSK.
+		Generate internal transmit monitor signal for FSK and OOK.
+		USOS "Compatibility Mode" when Robust Mode is selected.
+		Send a LTRS at the start of transmission (including macros).
+		Changed PSK transmit lock into a NSRecursive lock.
+		Beep when clickbuffer transitions to live signal. (0.88c DL2RUM request)	
+		RTTY Rx aural monitor AGC (max of 26 dB) (0.88c DL2RUM request)
+
+0.89	(January 21, 2011)
+		background aural RTTY was not enabled (DL2RUM)
+		reset click buffer when transmit entered and when flush AppleScript received
+		Contest -- "freeze click".
+		Multiple keyers (PTT and FSK) in µH Router (v1.80)
+		AppleScript macros.
+		Checkbox to prevent launching µH Router.
+		
+0.90	(January 23, 2011)
+		Mono channel for input sound card.
+		AppleScript version, scriptVersion.
+
+0.91	(January 25, 2011)
+		Fixed bug when missing MacLoggerDX
+		
+0.92	(Feb 2, 2011)
+		Compatibility with old µH Router.
+		Fixed bug with output channels.
+		
+0.93	(July 3, 2011)
+		(a) Lion incompatibilities (Giorgio Campiotti)
+		(b) set microKeyer to auto routing at end if it is selected in Preference (added Preference:Connection:microHAM )
+		(c) send mono channels through input resampling pipe
+		(d) use channels/bits from device; don't try to change it
+
+0.94	(July 10, 2011)
+		Change update link to w7ay.net
+
+0.95	(Sept 2, 2011)
+		Fixed bug with JIS table not initializing.
+		Changed PSK.m text insertion to better handle JIS and umlauts
+
+0.96	(Feb 6, 2012)
+		Fix contest interface crashing in Lion v0.96a
+		Blend in Raised Cosine filter for PSK31 v0.96b
+		Keyboard shortcuts to select transmit and receive views v0.96c
+		Incremental Text Speech Synthesizer v0.96d
+	
+0.97	(Feb 13, 2012)
+		Open PSK TableView with Cmd-B.  Close with Cmd-Shift-B.
+		Scanner for PSKTable view (Cmd-.)
+
+0.98	(Feb 14, 2012)
+		Fixed initReceiver bug in CW interface (changed to initreceiver:modem:)
+
+0.99	(Mar 29, 2012)
+		Removed setHidden in Menu Items of v0.96c for Tiger.
+		
+1.00	(April 10, 2012)
+		Spelled Incremental Speech Command-L.
+		Ciustom Enunciation file in Application Support.
+		
+1.01	(April 13, 2012)
+		Keyboard shortcuts for QSO fields v1.01a.
+		Voice Assist v1.01b
+		NextStationIntableView v1.01c
+		Speak PSKTableView frequency v1.01d
+	
+1.02	(April 19, 2012)
+		Speak words as letters if it has mixed alphabets and numbers. 1.02a
+		Direct Frequency Access, speak current frequency. 1.02b
+		Speak modem tab selection, selectNextModem. 1.02c
+		Separate voice for Voice Assist, v1.02d
+		Voice Assist alerts (Messages.m), v1.02e
+
+1.03	(July 27, 2012)
+		local buffers for NSBitmapImageReps for waterfall.
+		Hellschreiber
+
+To do:
+		pseudo sync for RTTY?
+		AppleScript macro.
+		AppleScript for version? (also bump scriptversion to 3)
+		Incorporate serial port of cocoaPTT into cocoaModem?
+
+		
+Possible features:
+
+	RTTY:
+	
+		Implement RTTY as 45.45 baud synchronous Incremental FSK signal.
+		Time shift ATC relative to signal to get an idea of selective fades at the start of a transmission.
+		Add ability to insert LTRS and FIGS.
+	
+	Panning spectrum view.
+
+	Implement envelope detection of BPSK31
+
+	Auto detection of inverted signals.
+	
+	
+
+
+BUG:
+	AppleScript lock not working?
+	ATC space time constant is bogus?  (RTTYATC.m)  -- check updateAGC() ?
+
+
+Need:
+
+	
+Unreplicated bugs:	
+	Brag inserted into wrong place? PSK?  (Can't replicate.)
+	Hellschreiber waterfall turns all green? (Can't replicate.)
+	
+To do:
+	NSLock in contest interface to keep the TextStorage static when it is clicked for callsign
+	Raw (non-ASCII) print RTTY
+	
+	Instrumentation
+		Measure with time constants on spectrum, expand horizontally
+		Oscilloscope
+		Generator
+		
+	Read and write AIFF files.
+		
+	Input port activity monitor
+	Dual Transmit.
+	Alpha channel to dim non-active receiver.
+	Model matched filter for multipath.
+	log button AppleScript for contest mode
+
+-----------------------------------------------------------------
+Data stream in v0.61 looks like:  (>> push, << pull)
+
+CoreAudio (thread A)
+	ExtendedAudioChannel: -deviceInputProc >> DataPipe (write)	(thread A)
+	
+		ExtendedAudioChannel: readThread << inputResampleProc << DataPipe (readData)	(thread B)
+		ExtendedAudioChannel: readThread >> ExtendedInputPort 
+		
+			ExtendedInputPort: hasNewData >> sendDataToClients
+			
+				ModemSource: importData >>
+				
+					PSKConfig: importData >>
+					
+						PSK : importData >>
+						
+							PSKReceiver: importData (unlockWithCondition: kHasData)
+							
+							PSKReceiver: receiveThread (lockWhenCondition: kHasData)
+							
+							
+								
+				
+		
+		

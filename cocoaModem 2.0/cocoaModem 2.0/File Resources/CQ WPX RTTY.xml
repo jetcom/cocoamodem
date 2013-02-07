@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contest>
+	<contestName>CQ WPX RTTY</contestName>
+	<sent></sent>
+	<macros>
+		<caption>CQ~Exch~QSL~ ~ QRZ?~Again?~ Dupe~Repeat~</caption>
+		<body>%[tx]\nCQ WPX de %c %c %c CQ %[rx]~%[tx]\n%C 599 %3n %3n %C %[rx]~%[tx]\n%C QSL ES TNX\nQRZ de %c %[rx]~~%[tx]\nQRZ de %c %[rx]~%[tx]\nAGAIN PSE?\n%[rx]~%[tx]\n%C SRI, worked before de %c %[rx]~%[tx]\n599 %3n %3n %3n %[rx]~</body>
+		<caption>QRL?~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>%[tx]\nQRL? %c\n%[rx]~~~~~~~~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>~~~~~~~~</body>
+		<caption>Call~Exch~ ~  ~ ~Again?~  ~Repeat~</caption>
+		<body>%[tx]\nde %c %c %[rx]~%[tx]\n%C TNX 599 %3n %3n de %c %[rx]~~~~%[tx]\nAGAIN PSE?\n%[rx]~~%[tx]\n599 %3n %3n %3n %[rx]~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>~~~~~~~~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>~~~~~~~~</body>
+	</macros>
+</Contest>

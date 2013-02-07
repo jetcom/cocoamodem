@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contest>
+	<contestName>RTTY Roundup</contestName>
+	<sent></sent>
+	<macros>
+		<caption>CQ~Exch~QSL~ ~ QRZ?~Again?~ Dupe~Repeat~</caption>
+		<body>%[tx]\nROUNDUP de %c %c CQ %[rx]~%[tx]\n%C 599 %x %x %C %[rx]~%[tx]\n%C QSL ES TNX\nQRZ de %c %[rx]~~%[tx]\nQRZ de %c %[rx]~%[tx]\nAGAIN PSE?\n%[rx]~%[tx]\n%C SRI, worked before de %c %[rx]~%[tx]\n599 %x %x %x %[rx]~</body>
+		<caption>QRL?~ ~JA QSL~ ~ ~ ~ ~Roger~</caption>
+		<body>%[tx]\nQRL? %c\n%[rx]~~%[tx]\n%C CFM ARIGATOGOZAIMASHITA\nQRZ de %c %[rx]~~~~~>%[tx]\nQSL QSL\n%[rx]~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>~~~~~~~~</body>
+		<caption>Call~Exch~ ~  ~ ~Again?~  ~Repeat~</caption>
+		<body>%[tx]\nde %c %c %[rx]~%[tx]\n%C TNX 599 %x %x de %c %[rx]~~~~%[tx]\nAGAIN PSE?\n%[rx]~~%[tx]\n599 %x %x %x %[rx]~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~Roger~</caption>
+		<body>~~~~~~~>%[tx]\nQSL QSL\n%[rx]~</body>
+		<caption> ~ ~ ~ ~ ~ ~ ~ ~</caption>
+		<body>~~~~~~~~</body>
+	</macros>
+</Contest>

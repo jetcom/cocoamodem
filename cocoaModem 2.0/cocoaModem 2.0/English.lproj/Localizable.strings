@@ -1,0 +1,135 @@
+﻿/* check for updates menu response */
+"Update information error" = "Update information not available.";
+"Update file not found" = "Could not open URL http://www.w7ay.net/site/Downloads/updates.txt";
+"No update info" = "Sorry. The URL http://www.w7ay.net/site/Downloads/updates.txt does not contain update information for cocoaModem.";
+"New download available" = "A newer version of cocoaModem is available.";
+"Update available info" = "cocoaModem 2.0 v%4.2f is available for download.";
+"Up to date" = "Your copy of cocoaModem is up to date.";
+"Up to date info" = "cocoaModem 2.0 v%4.2f is already the latest version." ;
+
+/* the follow should return "0" for all systems except for Japanese Mac OS X */
+"Use Shift-JIS" = "0";
+"Shift-JIS setting ignored." = "Shift-JIS setting ignored.";
+"Shift-JIS cannot be turned on" = "Shift-JIS can only be turned on if you are using Japanese Mac OS X or if you have enabled it in cocoaModem's Preferences.";
+
+/* splash message */
+"Welcome" = "Welcome.";
+"Creating Hellschreiber Modem" = "Creating Hellschreiber Modem";
+"Creating SITOR-B Modem" = "Creating SITOR-B Modem";
+"Creating Wideband CW Modem" = "Creating Wideband CW Modem";
+"Creating Dual RTTY Modem" = "Creating Dual RTTY Modem";
+"Creating Synch-AM Modem" = "Creating Synch-AM Modem";
+"Creating MFSK Modem" = "Creating MFSK Modem";
+"Creating FAX Modem" = "Creating FAX Modem";
+"Creating RTTY Modem" = "Creating RTTY Modem";
+"Creating PSK Modem" = "Creating PSK Modem";
+"Creating Wideband RTTY Modem" = "Creating Wideband RTTY Modem";
+"Discover Audio Devices" = "Discover Audio Devices";
+"Creating User Configuration" = "Creating User Configuration";
+"Reading preferences" = "Reading preferences";
+"Updating preferences" = "Updating preferences";
+
+/* tab names */
+"Hellschreiber" = "Hellschreiber";
+"SITOR-B" = "SITOR-B";
+"Wideband CW" = "Wideband CW";
+"Dual RTTY" = "Dual RTTY";
+"Synch-AM" = "Synch-AM" ;
+"MFSK" = "MFSK";
+"HF-FAX" = "HF-FAX";
+"RTTY" = "RTTY";
+"PSK" = "PSK";
+"Wideband RTTY" = "Wideband RTTY";
+
+/* PSK frequency field */
+"Off" = "Off";
+
+/* QSO.m */
+"QSO" = "QSO";
+
+/* buttons */
+"Receive" = "Receive";
+"Transmit" = "Transmit";
+"Active" = "Active";
+"Inactive" = "Inactive";
+
+/* FSK polarity */
+"Normal" = "Normal";
+"Reversed" = "Reversed" ;
+
+/* HF-FAX */
+"Full" = "Full";
+"Half" = "Half";
+"Pause" = "Pause";
+"Resume" = "Resume";
+
+/* windowtitle */
+"RTTY Receiver" = "RTTY Receiver";
+"Main Receiver" = "Main Receiver";
+"Sub Receiver" = "Sub Receiver";
+"CW Sidetone" = "CW Sidetone";
+
+/* macro */
+"Bad macro" = "Bad macro";
+
+/* hiragana */
+"Unrecognized encoding" = "Unrecognized keyboard encoding.";
+"kotoeri" = "If you are using the Kotoeri input method, you must use the alphabet input.\n\n.";
+"Shift-JIS" = "Shift-JIS";
+
+/* alerts */
+"welcome" = "\nWelcome to cocoaModem de W7AY\n\n";
+"Import Preferences from older version of cocoaModem?" = "Import Preferences from older version of cocoaModem?";
+"OK" = "OK";
+"Skip" = "Skip";
+"Quit anyway" = "Quit anyway";
+"Quit now" = "Quit now";
+"Continue anyway" = "Continue anyway";
+"Internal error" = "Internal error encountered, cocoaModem is quiting";
+"Use thousands or millions of colors" = "Display must be in thousands or millions of colors";
+"Use Display Preferences" = "You can set the display depth by using the System Preferences' Display preference panel.";
+"Use Millions of Colors" = "Please use 'Millions of Colors' for the Display setting in System Preferences";
+"Need more colors" = "cocoaModem may not work correctly when the display is set to Thousands of Colors.  You can set the display depth by using the System Preferences' Display preference panel.";
+"Close Config Panel" = "Cannot transmit with the Config Panel open";
+"Close Config Panel and try Again" = "Please close the Config Panel and try again.";
+"Carrier frequency not selected." = "Carrier frequency is not selected.";
+"Frequency not selected" = "Frequency not selected.";
+"Frequency not set" = "The transceiver frequency is not set (or out of range).  You need to click in the waterfall to set the receive frequency before that transceiver can have a frequency to transmit at!";
+"You have not yet selected a frequency in the waterfall!" = "You have not yet selected a frequency in the waterfall!";
+"First select frequency" = "You need to first select a frequency in the waterfall to lock to.\n\nFirst unlock the transmiter.  Then select a frequency in the waterfall.  After that try locking again.";
+"Sound Card not active" = "Sound Card is not active." ;
+"psk sound not active" = "PSK Sound Card not active";
+"make interface active" = "Please select Config Panel, select an output device and turn interface state to Active.  This interface state can be kept active the next time you launch cocoaModem selecting the checkbox in the Connection panel in Preferences.";
+"Cannot click on inactive waterfall" = "You cannot click on an inactive waterfall.\n\nPlease choose the Sound Card in the Config window and make it active.";
+"RTTY settings needs to be reselected" = "RTTY or CW Sound Card settings needs to be reselected";
+"ASCII settings needs to be reselected" = "ASCII Sound Card settings needs to be reselected";
+"Select Sound Card" = "Please select the Sound Card in the Config window and make it active.";
+"Device removed" = "A previously selected Sound Card has been removed from the system, a selection has never been made, or some Sound Card selection cannot be made.  Please reselect from the Config Panel.";
+"Reselect FSK" = "Either reselect a different FSK/AFSK device,\n\nor relaunch cocoaModem and mH Router after reconnecting the missing device.\n\nAFSK will be used until a corrective action is made.\n\n";
+"text is write only" = "Attempting to insert text in the receive view.";
+"cannot insert text" = "You cannot insert text into the receive view.\n\nSelect the transmit view (click on it) to insert text for transmission.\n\nTo clear selections of the receive view, make a selection and use the delete key, or select the entire view (Command-A) and press the delete key, or use the contextual menu (control-mouse down).";
+"text already sent" = "Attempting to modify text that has already been transmitted.";
+"cannot insert after sending" = "You cannot replace or insert into text that has already been sent!\n\nTo clear the view, select the entire view (Command-A) and press the delete key, or use the contextual menu (control-mouse down).";
+"PSK settings needs to be reselected" = "PSK Sound Card settings needs to be reselected";
+"Selected PSK Transceiver not on" = "Selected PSK Transceiver not on";
+"need to set xcvr" = "The transceiver frequency is not set (or is out of range).  The transceiver that you have selected (xcvr 1 or xcvr 2) in currently Off.  You need to click in the waterfall to set the receive frequency for that transceiver, and the transmitter will lock up to that receiver's frequency." ;
+"MFSK cannot transmit." = "MFSK cannot transmit.";
+"Hellschreiber not on" = "Hellschreiber not turned on";
+"Click on waterfall" = "The transmitter frequency has not been set.  You need to click in the waterfall to set the receive frequency, and the transmitter will lock up to that receiver's frequency.";
+"AppleScript error" = "AppleScript error";
+"File not found" = "File not found";
+"Directory not found" = "Directory not found";
+"Wrong data type" = "Wrong data type in AppleScript";
+"Undefined variable" = "Undefined variable in AppleScript";
+"sound card sleep problem" = "One or more sound device(s) did not wake up from sleep.  Please quit and relaunch cocoaModem to reinitialize the missing devices.";
+"need core audio init" = "Some sound devices did not wake up from sleep and requires reinitialization by MacOS CoreAudio.";
+"missing ptt" = "Original PTT Device is not found, using VOX instead.";
+
+/* contest */
+"No prior macro sent" = "No prior macro sent.";
+"Select a macro" = "If you have selected Last Used in the menu, you need to first transmit a macro, after which clicking repeat will start repeating that macro.\n\nOtherwise, select a fixed macro with in that menu.";
+"Macro is empty" = "Macro is empty.";
+"selected macro is empty" = "The selected macro is empty.";
+"database not saved" = "Contest database not yet saved!";
+"save contest" = "Some item(s) of the contest database have not yet been saved.  Please select the Save menu item in the Contest menu in the Menu Bar.";
+

@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = splash; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {splashMsg = id; splashScreen = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = splashPanel; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
+    ); 
+    IBVersion = 1; 
+}
