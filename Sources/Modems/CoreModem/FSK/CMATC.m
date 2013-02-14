@@ -153,7 +153,7 @@ static int threshold( int* bits, int bitsPerCharacter ) ;
 		if ( v > norm ) norm = v ;
 	}
 	norm = 0.5/norm ;
-	vsmul( syncedData, 1, &norm, syncedData, 1, 256 ) ;
+	vDSP_vsmul( syncedData, 1, &norm, syncedData, 1, 256 ) ;
 
 	[ self exportData ] ;
 }

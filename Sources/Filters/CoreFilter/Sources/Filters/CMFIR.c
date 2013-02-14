@@ -374,9 +374,9 @@ static void performFilter( CMFIR *fir, float *inArray, int inLength, float *outA
 		//  provide FIR overlap by copying an extra set of activeTaps into the delay line 
 		memcpy( &fir->delayLine[n], inArray, sizeof( float )*n ) ;
 		//  filter the data in the delay line (length = taps)
-		conv( &fir->delayLine[0], 1, &fir->kernel[0], 1, &outArray[0], 1, n, n ) ;
+		vDSP_conv( &fir->delayLine[0], 1, &fir->kernel[0], 1, &outArray[0], 1, n, n ) ;
 		//  filter rest of the data
-		conv( &inArray[0], 1, &fir->kernel[0], 1, &outArray[n], 1, inLength-n, n ) ;
+		vDSP_conv( &inArray[0], 1, &fir->kernel[0], 1, &outArray[n], 1, inLength-n, n ) ;
 		//  copy tail of data into the front of the delay line
 		memcpy( &fir->delayLine[0], &inArray[inLength-n], sizeof( float )*n ) ;
 	}
@@ -384,7 +384,7 @@ static void performFilter( CMFIR *fir, float *inArray, int inLength, float *outA
 		//  copy data into the delay line 
 		memcpy( &fir->delayLine[n], inArray, sizeof(float)*inLength ) ;
 		//  filter the data in the delay line (length = taps)
-		conv( &fir->delayLine[0], 1, &fir->kernel[0], 1, &outArray[0], 1, inLength, n ) ;
+		vDSP_conv( &fir->delayLine[0], 1, &fir->kernel[0], 1, &outArray[0], 1, inLength, n ) ;
 		memcpy( &fir->delayLine[0], &fir->delayLine[inLength], sizeof( float )*n ) ;
 	}
 }
@@ -405,12 +405,12 @@ static void performInterpolation( CMFIR *fir, float *inArray, int inLength, floa
 
 	//  filter the data in the delay line (length = taps)
 	for ( i = 0; i < stride; i++ ) {
-		conv( &fir->delayLine[0], 1, &fir->kernel[stride-i-1], stride, &outArray[i], stride, taps, taps ) ;
+		vDSP_conv( &fir->delayLine[0], 1, &fir->kernel[stride-i-1], stride, &outArray[i], stride, taps, taps ) ;
 	}
 	// continue filtering with new data (length = inlength-taps)
 	p = &outArray[n] ;
 	for ( i = 0; i < stride; i++ ) {
-		conv( &inArray[0], 1, &fir->kernel[stride-i-1], stride, &p[i], stride, inLength-taps, taps ) ;
+		vDSP_conv( &inArray[0], 1, &fir->kernel[stride-i-1], stride, &p[i], stride, inLength-taps, taps ) ;
 	}
 	//  copy tail into the delay line
 	memcpy( &fir->delayLine[0], &inArray[inLength-taps], sizeof( float )*taps ) ;
@@ -431,15 +431,15 @@ static void performDecimation( CMFIR *fir, float *inArray, int inLength, float *
 	if ( inLength <= taps ) {
 		//  provide FIR overlap by copying an extra set of activeTaps into the delay line 
 		memcpy( &fir->delayLine[taps], inArray, sizeof( float )*inLength ) ;	
-		for ( i = 0; i < inLength; i += factor ) conv( &fir->delayLine[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
+		for ( i = 0; i < inLength; i += factor ) vDSP_conv( &fir->delayLine[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
 		//  copy tail into the delay line
 		memcpy( &fir->delayLine[0], &fir->delayLine[inLength], sizeof( float )*taps ) ;
 		return ;
 	}	
 	//  provide FIR overlap by copying an extra set of activeTaps into the delay line 
 	memcpy( &fir->delayLine[taps], inArray, sizeof( float )*taps ) ;	
-	for ( i = 0; i < taps; i += factor ) conv( &fir->delayLine[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
-	for ( i = 0; i < inLength-taps; i += factor ) conv( &inArray[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
+	for ( i = 0; i < taps; i += factor ) vDSP_conv( &fir->delayLine[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
+	for ( i = 0; i < inLength-taps; i += factor ) vDSP_conv( &inArray[i], 1, fir->kernel, 1, outArray++, 1, 1, taps ) ;
 	//  copy tail into the delay line
 	memcpy( &fir->delayLine[0], &inArray[inLength-taps], sizeof( float )*taps ) ;
 }
@@ -483,7 +483,7 @@ float CMSimpleFilter( CMFIR *fir, float input )
 	delayLine = &fir->delayLine[fir->delaylineHead] ;
 	//  provide FIR overlap by copying new data at the end the delay line 
 	delayLine[taps] = input ;
-	conv( delayLine, 1, fir->kernel, 1, &v, 1, 1, taps ) ;
+	vDSP_conv( delayLine, 1, fir->kernel, 1, &v, 1, 1, taps ) ;
 	fir->delaylineHead++ ;
 	return v ;
 }
@@ -542,7 +542,7 @@ float CMDecimate( CMFIR *fir, float *inArray )
 	//  provide FIR overlap by copying new data at the end the delay line 
 	memcpy( &delayLine[taps], inArray, sizeof( float )*factor ) ;
 	v = 0.0 ;
-	conv( delayLine, 1, fir->kernel, 1, &v, 1, 1, taps ) ;
+	vDSP_conv( delayLine, 1, fir->kernel, 1, &v, 1, 1, taps ) ;
 
 	fir->delaylineHead += factor ;
 	return v ;

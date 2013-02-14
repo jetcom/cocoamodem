@@ -25,7 +25,7 @@ CMFFT *FFTSpectrum( int log2n, Boolean useWindow )
 	fft->z.imagp = ( float* )malloc( fft->size*sizeof( float )/2 ) ;
 	fft->tempBuf.realp = ( float* )malloc( sizeof( float )*16384 ) ;
 	fft->tempBuf.imagp = ( float* )malloc( sizeof( float )*16384 ) ;
-	fft->vfft = create_fftsetup( log2n, FFT_RADIX2 ) ;
+	fft->vfft = vDSP_create_fftsetup( log2n, FFT_RADIX2 ) ;
 	return fft ;
 }
 
@@ -45,7 +45,7 @@ CMFFT *FFTForward( int log2n, Boolean useWindow )
 		fft->realBuf = (float*)malloc( sizeof(float)*fft->size ) ;
 		fft->imagBuf = (float*)malloc( sizeof(float)*fft->size ) ;
 	}
-	fft->vfft = create_fftsetup( log2n, FFT_RADIX2 ) ;
+	fft->vfft = vDSP_create_fftsetup( log2n, FFT_RADIX2 ) ;
 	return fft ;
 }
 
@@ -58,17 +58,17 @@ void CMPerformFFT( CMFFT *fft, float *input, float *output )
 
 	switch ( fft->style ) {
 	case PowerSpectrum:
-		ctoz( ( COMPLEX* )input, 2, &fft->z, 1, nby2 ) ; 
+		vDSP_ctoz( ( COMPLEX* )input, 2, &fft->z, 1, nby2 ) ; 
 		if ( fft->window ) {
 			for ( i = 0; i < nby2; i++ ) {
 				fft->z.realp[i] *= fft->window[i] ;
 				fft->z.imagp[i] *= fft->window[i] ;
 			}
 		}
-		fft_zript( fft->vfft, &fft->z, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
-		vsq( fft->z.realp, 1, fft->z.realp, 1, nby2 ) ;
-		vsq( fft->z.imagp, 1, fft->z.imagp, 1, nby2 ) ;
-		vadd( fft->z.realp, 1, fft->z.imagp, 1,  &output[0], 1, nby2 ) ;
+		vDSP_fft_zript( fft->vfft, &fft->z, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
+		vDSP_vsq( fft->z.realp, 1, fft->z.realp, 1, nby2 ) ;
+		vDSP_vsq( fft->z.imagp, 1, fft->z.imagp, 1, nby2 ) ;
+		vDSP_vadd( fft->z.realp, 1, fft->z.imagp, 1,  &output[0], 1, nby2 ) ;
 		break ;
 	default:
 		break ;
@@ -93,10 +93,10 @@ void CMPerformComplexFFT( CMFFT *fft, DSPSplitComplex *input, DSPSplitComplex *o
 			}
 			c.realp = fft->realBuf ;
 			c.imagp = fft->imagBuf ;
-			fft_zopt( fft->vfft, &c, 1, output, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
+			vDSP_fft_zopt( fft->vfft, &c, 1, output, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
 			break ;
 		}
-		fft_zopt( fft->vfft, input, 1, output, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
+		vDSP_fft_zopt( fft->vfft, input, 1, output, 1, &fft->tempBuf, fft->log2n, FFT_FORWARD ) ;
 		break ;
 	default:
 		break ;
@@ -107,7 +107,7 @@ void CMDeleteFFT( CMFFT *fft )
 {
 	switch ( fft->style ) {
 	case PowerSpectrum:
-		destroy_fftsetup( fft->vfft ) ;
+		vDSP_destroy_fftsetup( fft->vfft ) ;
 		if ( fft->window ) free( fft->window ) ;
 		free( fft->z.realp ) ;
 		free( fft->z.imagp ) ;

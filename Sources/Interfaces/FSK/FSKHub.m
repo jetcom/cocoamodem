@@ -406,11 +406,12 @@ static int unmap( int d )
 			buf[4] = 0x83 ;
 			write( controlWrite, buf, 5 ) ;
 			[ NSThread sleepUntilDate:[ NSDate dateWithTimeIntervalSinceNow:0.01 ] ] ;
+            // TEB - should be configurable!
 			//  set digital keyer mode v0.68
-			buf[0] = 0x0a ;
-			buf[1] = 0x03 ;
-			buf[2] = 0x8a ;
-			write( controlWrite, buf, 3 ) ;
+			//buf[0] = 0x0a ;
+			// buf[1] = 0x03 ;
+			//buf[2] = 0x8a ;
+			//write( controlWrite, buf, 3 ) ;
 			[ NSThread sleepUntilDate:[ NSDate dateWithTimeIntervalSinceNow:0.01 ] ] ;
 			//  invert FSK v0.68 (use the special 0f..8f backdoor in µH Router)
 			buf[0] = 0x0f ;

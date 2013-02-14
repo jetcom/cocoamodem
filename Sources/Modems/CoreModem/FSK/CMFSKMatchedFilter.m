@@ -78,7 +78,7 @@ float *createExtendedMatchedFilterKernel( int n, int m, float cutoff, int extn )
 	
 	//  convolve matched filter with the lowpass filter
 	kernel = ( float* )calloc( sizeof( float ), m ) ;
-	conv( matched, 1, lowpass->kernel, 1 /*symmetrical lpf*/, kernel, 1, m, extn*2 ) ;
+	vDSP_conv( matched, 1, lowpass->kernel, 1 /*symmetrical lpf*/, kernel, 1, m, extn*2 ) ;
 	sum = 0.0 ;
 	for ( i = 0; i < m; i++ ) sum += kernel[i] ;
 	sum *= 0.25 ;
